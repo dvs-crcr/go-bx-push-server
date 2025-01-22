@@ -94,7 +94,6 @@ fabric.properties
 *.log.*
 *.sig
 
-pkg/
 src/
 
 ### Bitrix template
