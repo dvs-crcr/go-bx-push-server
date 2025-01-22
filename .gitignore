@@ -94,7 +94,6 @@ fabric.properties
 *.log.*
 *.sig
 
-pkg/
 src/
 
 ### Bitrix template
@@ -124,3 +123,4 @@ src/
 
 # Project specific
 .idea
+*.iml
