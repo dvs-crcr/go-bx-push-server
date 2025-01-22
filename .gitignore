@@ -122,3 +122,5 @@ src/
 #Exclude default file storage directory
 /upload/
 
+# Project specific
+.idea
