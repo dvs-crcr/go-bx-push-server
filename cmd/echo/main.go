@@ -1,20 +1,22 @@
-package echo
+package main
 
 import (
-	"context"
+    "context"
+    "fmt"
 )
 
 func main() {
-	config := NewDefaultConfig()
-	config.parseVariables()
+    config := NewDefaultConfig()
+    config.parseVariables()
 
-	// TODO: connect logger
+    // TODO: connect logger
 
-	execute(config)
+    execute(config)
 }
 
 func execute(_ *Config) {
-	_ = context.Background()
+    _ = context.Background()
 
-	// TODO: implement some methods...
+    // TODO: implement some methods...
+    fmt.Println("trigger some methods")
 }
