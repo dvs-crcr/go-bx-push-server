@@ -20,7 +20,7 @@ type Config struct {
     Address  string
 }
 
-// NewDefaultConfig returns default Config
+// NewDefaultConfig returns default Config.
 func NewDefaultConfig() *Config {
     return &Config{
         LogLevel: DefaultLogLevel,
@@ -28,7 +28,7 @@ func NewDefaultConfig() *Config {
     }
 }
 
-// parseVariables uses to parse cli flags and environment variables
+// parseVariables uses to parse cli flags and environment variables.
 func (c *Config) parseVariables() {
     flag.StringVar(
         &c.Address, "a", c.Address, TextAddressUsage,
