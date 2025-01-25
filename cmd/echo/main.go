@@ -2,7 +2,9 @@ package main
 
 import (
     "context"
-    "fmt"
+    "log"
+
+    "github.com/dvs-crcr/go-bx-push-server/internal/echo"
 )
 
 func main() {
@@ -11,12 +13,17 @@ func main() {
 
     // TODO: connect logger
 
-    execute(config)
+    if err := execute(config); err != nil {
+        log.Fatal(err)
+    }
 }
 
-func execute(_ *Config) {
-    _ = context.Background()
+func execute(cfg *Config) error {
+    ctx := context.Background()
 
-    // TODO: implement some methods...
-    fmt.Println("trigger some methods")
+    echoService := echo.NewEchoService(
+        echo.WithAddress(cfg.Address),
+    )
+
+    return echoService.Start(ctx)
 }
